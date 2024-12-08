@@ -13,4 +13,12 @@ public class UserController {
 		return "data";
 	}
 	
+	@GetMapping("/")
+	public String getAll() {
+		System.out.println("New changes 1");
+		System.out.println("New changes 2");
+		System.out.println("New changes 3");
+		return "All";
+	}
+
 }
