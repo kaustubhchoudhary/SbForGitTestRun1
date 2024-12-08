@@ -3,6 +3,8 @@ package sb.jpa.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +22,11 @@ public class UserController {
 	@GetMapping("/")
 	public List<User> getAll() {
 		return List.of(new User(101, "Raj"), new User(102, "Raj"));
+	}
+	
+	@PutMapping("/update")
+	public User updateUser(@RequestBody User user) {
+		return new User(101, "ajay");
 	}
 
 }
